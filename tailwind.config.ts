@@ -1,18 +1,23 @@
-import type { Config } from "tailwindcss";
+import daisyui from 'daisyui';
+import typography from '@tailwindcss/typography';
 
-export default {
+const config = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  theme: {
-    extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
-    },
+  theme: {},
+  plugins: [typography, daisyui],
+  daisyui: {
+    themes: ['dim', 'cupcake', 'dark', 'nord', 'pastel'],
+    darkTheme: 'dark',
+    base: true,
+    styled: true,
+    utils: true,
+    logs: true,
+    themeRoot: ':root',
   },
-  plugins: [],
-} satisfies Config;
+}
+
+export default config;
