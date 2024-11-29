@@ -1,7 +1,5 @@
-// 'use client';
-
 const ThemeSwitcher = () => {
-  const themeList: string[] = ['dim', 'dark', 'cupcake', 'nord', 'pastel'];
+  const themeList: string[] = ['dark', 'dim', 'cupcake', 'nord', 'pastel'];
 
   return (
     <div className="dropdown dropdown-end">

@@ -9,8 +9,8 @@ const config = {
   // theme: {},
   plugins: [typography, daisyui],
   daisyui: {
-    themes: ['dim', 'dark', 'cupcake', 'nord', 'pastel'],
-    darkTheme: 'dim',
+    themes: ['dark', 'dim', 'cupcake', 'nord', 'pastel'],
+    darkTheme: 'dark',
     base: true,
     styled: true,
     utils: true,

@@ -1,5 +1,7 @@
-import MenuItems from '@/components/ui/MenuItems';
-import ThemeSwitcher from '@/components/ui/ThemeSwitcher';
+import NavbarMenu from '@/components/ui/header/NavbarMenu';
+import Link from 'next/link';
+import logo from '@/assets/logo.png';
+import Image from 'next/image';
 
 const Navbar = () => {
   return (
@@ -20,13 +22,24 @@ const Navbar = () => {
         </label>
       </div>
 
-      <div className="mx-2 flex-1 px-2">Navbar Title</div>
+      <div className="mx-2 flex-1 px-2">
+        <Link href="/" className="flex">
+          <Image
+            src={logo}
+            alt='My Logo'
+            height={30}
+            width={30}
+            className="mr-2"
+            priority
+          />
+          <span className="text-lg text-pink-400 font-bold">
+            My Word
+          </span>
+        </Link>
+      </div>
 
       <div className="hidden flex-none lg:block">
-        <ul className="menu menu-horizontal">
-          <MenuItems/>
-        </ul>
-        <ThemeSwitcher/>
+        <NavbarMenu/>
       </div>
     </div>
   );
