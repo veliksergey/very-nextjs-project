@@ -2,9 +2,9 @@ import type {Metadata} from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
 import {ReactNode} from 'react';
-import Navbar from '@/app/components/ui/Navbar';
-import DrawerSide from '@/app/components/ui/DrawerSide';
-import Footer from '@/app/components/ui/Footer';
+import Navbar from '@/components/ui/Navbar';
+import DrawerSide from '@/components/ui/DrawerSide';
+import Footer from '@/components/ui/Footer';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -26,15 +26,19 @@ const RootLayout = ({children}: Readonly<{ children: ReactNode; }>) => {
   return (
     <html lang="en">
     <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+
     <div className="drawer">
-      <input id="my-drawer-3" type="checkbox" className="drawer-toggle"/>
+      <input id="app-drawer" type="checkbox" className="drawer-toggle"/>
       <div className="drawer-content flex flex-col">
+
         <Navbar/>
         {children}
         <Footer/>
+
       </div>
       <DrawerSide/>
     </div>
+
     </body>
     </html>
   );

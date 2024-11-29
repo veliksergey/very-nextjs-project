@@ -3,19 +3,18 @@ import typography from '@tailwindcss/typography';
 
 const config = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  theme: {},
+  // theme: {},
   plugins: [typography, daisyui],
   daisyui: {
-    themes: ['dim', 'cupcake', 'dark', 'nord', 'pastel'],
-    darkTheme: 'dark',
+    themes: ['dim', 'dark', 'cupcake', 'nord', 'pastel'],
+    darkTheme: 'dim',
     base: true,
     styled: true,
     utils: true,
-    logs: true,
+    logs: false,
     themeRoot: ':root',
   },
 }

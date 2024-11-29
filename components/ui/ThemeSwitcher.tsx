@@ -1,10 +1,10 @@
-'use client';
+// 'use client';
 
 const ThemeSwitcher = () => {
-  const themeList: string[] = ['dim', 'cupcake', 'dark', 'nord', 'pastel'];
+  const themeList: string[] = ['dim', 'dark', 'cupcake', 'nord', 'pastel'];
 
   return (
-    <div className="dropdown">
+    <div className="dropdown dropdown-end">
       <div tabIndex={0} role="button" className="btn m-1">
         Theme
         <svg
@@ -23,7 +23,7 @@ const ThemeSwitcher = () => {
               <input
                 type="radio"
                 name="theme-dropdown"
-                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                className="theme-controller btn btn-sm btn-block btn-ghost justify-start capitalize"
                 aria-label={theme}
                 value={theme}/>
             </li>

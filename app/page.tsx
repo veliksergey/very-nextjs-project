@@ -1,9 +1,14 @@
+import Link from 'next/link';
+
 const RootPage = () =>  {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-base-100">
       <h1 className="text-3xl font-bold text-primary">Welcome to DaisyUI!</h1>
       <button className="btn btn-primary mt-4">Click Me</button>
-      <hr/>
+      <Link href="/about" className="btn btn-accent">About Page</Link>
+      <br/>
+
+      <br/>
 
 
       <article className="prose pt-4">
